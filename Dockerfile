@@ -13,5 +13,8 @@ RUN npm install
 # Copy the rest of the application files into the working directory
 COPY . /app/
 
+# Expose port 3000 to allow external access
+EXPOSE 3000
+
 # Define the entry point for the container
 CMD ["npm", "start"]
