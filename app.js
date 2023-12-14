@@ -4,13 +4,14 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const errorHandler = require("./src/Config/errorHandler");
-
+const cors = require('cors'); 
 const swaggerSetup = require("./src/Config/swaggerSetup");
 var indexRouter = require("./src/routes/index");
 var usersRouter = require("./src/routes/users");
 var userResgistrationRouter = require("./src/routes/userResgistration");
 var app = express();
 app.use(errorHandler);
+app.use(cors());
 swaggerSetup(app);
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

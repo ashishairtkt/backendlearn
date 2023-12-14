@@ -1,16 +1,7 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-
-
 const UsController = require("../Controllers/userContr");
-
-
-
-
-
-
-
 
 /**
  * @swagger
@@ -48,7 +39,6 @@ const UsController = require("../Controllers/userContr");
  *       '500':
  *         description: Internal server error
  */
-
 
 /**
  * @swagger
@@ -141,9 +131,9 @@ const UsController = require("../Controllers/userContr");
  *       '500':
  *         description: Internal server error
  */
-router.get('/allusers', UsController.getAllUsers);
-router.get('/:userId', UsController.getUserById);
-router.post('/adduser', UsController.addUser);
-router.put('/edituser/:userId', UsController.updateUser);
-router.delete('/deleteuser/:userId', UsController.deleteUser);
+router.get("/allusers", UsController.getAllUsers);
+router.get("/:userId", UsController.getUserById);
+router.post("/adduser", UsController.addUser);
+router.put("/edituser/:userId", UsController.updateUser);
+router.delete("/deleteuser/:userId", UsController.deleteUser);
 module.exports = router;
